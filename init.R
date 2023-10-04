@@ -1,0 +1,8 @@
+
+my_packages = c("shiny", "plotly", "gridlayout", "bslib", "DT", "dplyr", "tidyr", "forcats", "reshape" )
+install_if_missing = function(p) {
+  if (p %in% rownames(installed.packages()) == FALSE) {
+    install.packages(p)
+  }
+}
+invisible(sapply(my_packages, install_if_missing))
